@@ -203,7 +203,7 @@ def guardar_configuracion(tipo_entropia, lF, d, tau, c, S_max):
 
 def procesar_datos(tipo_entropia, lF, d, tau, c, S_max):
     print("\n[ETAPA] Iniciando preprocesamiento completo...\n")
-    rutas = [os.path.join(DATA_DIR, f"Class{i+1}.csv") for i in range(4)]
+    rutas = [os.path.join(DATA_DIR, f"class{i+1}.csv") for i in range(4)]
     X = cargar_datos_ppr(rutas)
     X_diff = aplicar_derivada_discreta(X)
     segmentos = segmentar_muestras(X_diff, lF)
