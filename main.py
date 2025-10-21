@@ -124,7 +124,7 @@ def evaluate_configuration(
             raise ValueError("tipo_entropia debe ser 1-4")
 
     # Cargar datos de las cuatro clases; cada archivo contiene 4 réplicas
-    rutas = [os.path.join(ppr.DATA_DIR, f"Class{i+1}.csv") for i in range(4)]
+    rutas = [os.path.join(ppr.DATA_DIR, f"class{i+1}.csv") for i in range(4)]
     clases: List[np.ndarray] = []  # Lista de matrices (N, 4)
     for ruta in rutas:
         df = pd.read_csv(ruta, header=None)
